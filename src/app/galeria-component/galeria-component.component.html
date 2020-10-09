@@ -1,0 +1,28 @@
+
+<div style="text-align: center;">
+  
+  <h2>{{titulo}}</h2>
+
+  <ng-container *ngIf="fotos">
+
+      <div *ngFor="let foto of fotos; let i = index">
+        <ng-container *ngIf="i == fotoAtual">
+          <img [src]="'../../' + fotos[i]" alt="Foto 1" height="300px">
+        </ng-container>
+        
+      </div>
+      
+      <p>Foto {{fotoAtual + 1}} de {{fotos.length}}</p> 
+      
+      <button (click)="primeiraFoto()" [disabled]="fotoAtual == 0 ? true : false ">Primeira</button>
+      <button (click)="fotoAnterior()">Anterior</button>
+      <button (click)="fotoSeguinte()">Proxima</button>
+      <button (click)="ultimaFoto()" [disabled]="fotoAtual == fotos.length -1 ? true : false ">Ultima</button>
+
+  </ng-container>
+
+  <ng-container *ngIf="!fotos">
+    <p>Galeria vazia</p>
+  </ng-container>
+
+</div>

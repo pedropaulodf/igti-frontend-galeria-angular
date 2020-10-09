@@ -1,0 +1,23 @@
+*{
+  font-family: sans-serif;
+}
+img{
+  border-radius: 10px;
+}
+button{
+  border: 1px solid grey;
+  background-color: rgb(255, 255, 255);
+  padding: 10px 20px;
+  color: black;
+  border-radius: 7px;
+  cursor: pointer;
+  margin-right: 3px;
+  transition: box-shadow 0.2s;
+}
+button:hover{
+  background-color: rgb(241, 241, 241);
+  box-shadow: 4px 4px 10px 0px rgb(205 205 205);
+}
+button:disabled{
+  opacity: 0.3;
+}
